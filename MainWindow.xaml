@@ -1,0 +1,64 @@
+﻿<Window x:Class="project5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project5"
+        mc:Ignorable="d"
+        Title="Практическая работа №5" Height="450" Width="800" Background="#FFCDE9F1">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/zakat-zimoj-na-gore.jpg"/>
+        </Grid.Background>
+        <Menu VerticalAlignment="Top" Background="#FF7B83D2">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Создать"/>
+                <MenuItem Header="Открыть"/>
+                <MenuItem Header="Сохранить"/>
+                <Separator/>
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Команды">
+                <MenuItem Header="Рассчитать" Click="Calculate_Click"/>
+                <MenuItem Header="Изменить" Click="Изменить_Click"/>
+                <MenuItem Header="Очистить" Click="Clear_Click"/>
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="Справка">
+                <MenuItem Header="О программе" Click="About_Program_Click"/>
+            </MenuItem>
+        </Menu>
+        <GroupBox Margin="36,37,0,0" Header="Исходные данные:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Height="163" Foreground="White">
+            <Grid>
+                <TextBox x:Name="inputValue1" Opacity="0.7" Width="100" Margin="194,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <TextBox x:Name="inputValue2" Opacity="0.7" Width="100" Margin="194,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <TextBox x:Name="inputValue3" Opacity="0.7" Width="100" Margin="194,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <Label Content="Введите первое число:" Margin="22,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Foreground="White"/>
+                <Label Content="Введите второе число:" Margin="23,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Foreground="White"/>
+                <Label Content="Введите третье число:" Margin="22,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Foreground="White"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Рассчитать" x:Name="calculate" HorizontalAlignment="Left" Height="30" Margin="65,212,0,0" VerticalAlignment="Top" Width="276" Click="Calculate_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <GroupBox Margin="36,252,0,0" Header="Результаты" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Foreground="White">
+            <Grid>
+                <Label Content="Сумма чисел:" HorizontalAlignment="Left" Height="32" Margin="15,0,0,0" VerticalAlignment="Center" Width="85" Foreground="White"/>
+                <TextBox x:Name="result" IsReadOnly="True" HorizontalAlignment="Left" Height="37" Margin="117,24,0,24"  Width="136"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Очистить" HorizontalAlignment="Left" Height="30" Margin="443,276,0,0" VerticalAlignment="Top" Width="276" Click="Clear_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <Button Content="О программе" HorizontalAlignment="Left" Height="30" Margin="443,319,0,0" VerticalAlignment="Top" Width="128" Click="About_Program_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <Button Content="Выход" HorizontalAlignment="Left" Height="30" Margin="591,320,0,0" VerticalAlignment="Top" Width="128" Click="Exit_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <GroupBox Margin="414,37,0,0" Header="Изменить данные:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Foreground="White">
+            <Grid>
+                <TextBox x:Name="inputValueA" Opacity="0.7" Width="100" Margin="194,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="inputValueB" Opacity="0.7" Width="100" Margin="194,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="inputValueC" Opacity="0.7" Width="100" Margin="194,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Grid.ColumnSpan="2"/>
+                <Label Content="Введите первое число:" Margin="22,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Foreground="White"/>
+                <Label Content="Введите второе число:" Margin="23,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Foreground="White"/>
+                <Label Content="Введите третье число:" Margin="22,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Foreground="White"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Изменить" HorizontalAlignment="Left" Height="30" Margin="443,217,0,0" VerticalAlignment="Top" Width="276" Click="Изменить_Click" Cursor="Hand" Background="#FF7B83D2"/>
+    </Grid>
+</Window>
